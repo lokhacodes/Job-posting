@@ -1,24 +1,27 @@
 import mongoose from "mongoose";
 
-const jobSchema = new mongoose.Schema(
+const applicationSchema = new mongoose.Schema(
   {
-    title: {
+    job_id: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Job",
+      required: true,
+    },
+    name: {
       type: String,
       required: true,
     },
-    company: {
+    email: {
       type: String,
       required: true,
+      match: /^\S+@\S+\.\S+$/,
     },
-    location: {
+    resume_link: {
       type: String,
       required: true,
+      match: /^https?:\/\/.+$/,
     },
-    category: {
-      type: String,
-      required: true,
-    },
-    description: {
+    cover_note: {
       type: String,
       required: true,
     },
@@ -26,4 +29,4 @@ const jobSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-export default mongoose.model("Job", jobSchema);
+export default mongoose.model("Application", applicationSchema);
