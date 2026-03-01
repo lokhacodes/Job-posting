@@ -3,7 +3,8 @@ import Navbar from "../components/Navbar";
 import Header from "../components/Header";
 import Home from "./pages/Home";
 import Footer from "../components/Footer";
-import Company from "../components/Company";
+import Companies from "../components/Company";
+import Categories from "../components/Category";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           <Route path="/" element={<Home />} />
         </Routes>
       </div>
-      <Company />
+      <Companies />
+      <Categories />
       <Footer />
     </div>
   );
