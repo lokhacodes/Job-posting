@@ -16,7 +16,7 @@ app.use("/api/applications", applicationRoutes);
 
 
 mongoose
-  .connect(process.env.MONGO_URL)
+  .connect(MONGO_URL)
   .then(() => {
     console.log("MongoDB Connected");
     app.listen(5000, () =>
