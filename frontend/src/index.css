@@ -71,7 +71,7 @@
   align-items: center;
   padding: 60px 20px;
   font-family: Clash Display;
-  color: #333;
+  color: #F8F8FD;
 }
 
 .hero-content {
@@ -82,20 +82,23 @@
   color: #222;
 }
 
-.hero h1 {
-  font-size: 72px;
-  margin-bottom: 0px;
+.hero-headings {
+ font-family: "Clash Display", sans-serif;
   font-weight: 600;
-  
+  font-size: 72px;
+  line-height: 110%;       
+  letter-spacing: 0em;     
+  margin: 0;
 }
 
-.hero-content .hero-heading{
-  font-family: "Clash Display", sans-serif;
-  font-weight: 600;
-  font-size: 72px;
-  line-height: 110%;       /* 110% line height */
-  letter-spacing: 0em;     /* 0% letter spacing */
-  margin: 0; 
+.hero-headings h1 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.hero-headings img{
+  margin:;
 }
 
 .highlight {
@@ -103,9 +106,13 @@
 }
 
 .subheading {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 30px;
+ font-family: Epilogue;
+ font-weight: 400;
+ font-size: 20px;
+ leading-trim: NONE;
+ line-height: 160%;
+ letter-spacing: 0%;
+
 }
 
 .search-bar {
@@ -142,7 +149,7 @@
 }
 
 .search-btn {
-  background: #6a1b9a; /* Purple button */
+  background: #4640DE;
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -321,4 +328,43 @@
   .social-icons {
     margin-top: 10px;
   }
+}
+------------------
+.companies {
+  background-color: #f3f4f6; /* light gray background */
+  padding: 40px 0;
+}
+
+.companies-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.companies-title {
+  font-size: 14px;
+  color: #9ca3af; /* muted gray */
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.companies-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px; /* spacing between logos */
+  flex-wrap: wrap;
+}
+
+.companies-logos img {
+  height: 28px;
+  opacity: 0.5; /* faded effect */
+  filter: grayscale(100%);
+  transition: opacity 0.3s ease;
+}
+
+.companies-logos img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
 }

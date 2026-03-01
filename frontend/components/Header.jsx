@@ -14,11 +14,12 @@ const Header = () => {
         </h1>
         <h1>
           <span className="highlight">5000+ Jobs</span>
-          <img src="src/assets/Vector.png" alt="Vector" />
         </h1>
+        <img src="src/assets/Vector.png" alt="Vector" />
         </div>
         <p className="subheading">
-          Great platform for the job seeker that searching for new career heights
+          Great platform for the job seeker that searching for 
+          <br />new career heights
           and passionate about startups.
         </p>
 
