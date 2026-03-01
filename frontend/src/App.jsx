@@ -5,7 +5,8 @@ import Home from "./pages/Home";
 import Footer from "../components/Footer";
 import Companies from "../components/Company";
 import Categories from "../components/Category";
-
+import FeaturedJobs from "../components/FeaturedJobs";
+import LatestJobs from "../components/Latestjobs";
 function App() {
   return (
     <div className="bg-gray-50 min-h-screen flex flex-col">
@@ -18,6 +19,8 @@ function App() {
       </div>
       <Companies />
       <Categories />
+      <FeaturedJobs />
+      <LatestJobs />
       <Footer />
     </div>
   );

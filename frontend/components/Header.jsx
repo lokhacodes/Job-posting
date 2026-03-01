@@ -1,52 +1,58 @@
 import React from "react";
-
+import { Search, MapPin } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="hero">
+    <div className="hero-wrapper">
       <div className="hero-content">
-        <div className="hero-headings">
-        <h1>
-          Discover  
-        </h1>
-        <h1>
-          more than
-        </h1>
-        <h1>
-          <span className="highlight">5000+ Jobs</span>
-        </h1>
-        <img src="src/assets/Vector.png" alt="Vector" />
-        </div>
-        <p className="subheading">
-          Great platform for the job seeker that searching for 
-          <br />new career heights
-          and passionate about startups.
-        </p>
+        <div className="hero-left">
+          <h1>
+            Discover <br />
+            more than <br />
+            <span>5000+ Jobs</span>
+          </h1>
 
-        {/* Search Bar */}
-        <div className="search-bar">
-          <div className="search-input">
-            <span className="icon">🔍</span>
-            <input type="text" placeholder="Job title or keyword" />
+          <div className="underline">
+            <img src="/src/assets/Vector.png" alt="underline" />
           </div>
-          <div className="search-location">
-            <span className="icon">📍</span>
-            <select>
-              <option>Florence, Italy</option>
-              <option>Dhaka, Bangladesh</option>
-              <option>New York, USA</option>
-              <option>London, UK</option>
-            </select>
-          </div>
-          <button className="search-btn">Search my job</button>
-        </div>
 
-        {/* Popular Categories */}
-        <p className="popular">
-          Popular: <span>UI Designer, UX Researcher, Android, Admin</span>
-        </p>
+          <p>
+            Great platform for the job seeker that searching for <br />
+            new career heights and passionate about startups.
+          </p>
+
+          <div className="search-box">
+            
+            
+            <div className="input-group">
+              <Search size={18} className="input-icon" />
+              <input
+                type="text"
+                placeholder="Job title or keyword"
+                className="input-field"
+              />
+            </div>
+
+            
+            <div className="select-group">
+              <MapPin size={18} className="input-icon" />
+              
+              <select className="select-field">
+                <option>Florence, Italy</option>
+                <option>Berlin, Germany</option>
+                <option>Madrid, Spain</option>
+              </select>
+            </div>
+
+            <button className="search-btn">Search my job</button>
+          </div>
+
+          <div className="popular">
+            Popular : UI Designer, UX Researcher, Android, Admin
+          </div>
+        </div>
       </div>
-    </header>
+    </div>
   );
 };
 
