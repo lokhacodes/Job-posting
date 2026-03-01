@@ -1,17 +1,23 @@
-import { Link } from "react-router-dom";
+import React from "react";
 
-export default function Navbar() {
+
+const Navbar = () => {
   return (
-    <nav className="bg-white shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between">
-        <Link to="/" className="text-2xl font-bold text-primary">
-          QuickHire
-        </Link>
-        <div className="space-x-6">
-          <Link to="/">Jobs</Link>
-          <Link to="/admin">Admin</Link>
+    <nav className="navbar">
+      <div className="nav-logo">
+        <img src="src/assets/logo 2.png" alt="Logo" className="logo-img" />
+        QuickHire
         </div>
+      <ul className="nav-links">
+        <li><a href="#">Find Jobs</a></li>
+        <li><a href="#">Browse Companies</a></li>
+      </ul>
+      <div className="nav-actions">
+        <button className="login-btn">Login</button>
+        <button className="signup-btn">Sign Up</button>
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
