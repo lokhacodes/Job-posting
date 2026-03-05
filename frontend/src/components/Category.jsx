@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import {
   Megaphone,
   Palette,
@@ -17,42 +18,50 @@ export default function Categories() {
       title: "Design",
       jobs: "235 jobs available",
       icon: <Palette size={28} />,
+      category: "Design",
     },
     {
       title: "Sales",
       jobs: "756 jobs available",
       icon: <BarChart3 size={28} />,
+      category: "Sales",
     },
     {
       title: "Marketing",
       jobs: "140 jobs available",
       icon: <Megaphone size={28} />,
+      category: "Marketing",
       active: true,
     },
     {
       title: "Finance",
       jobs: "325 jobs available",
       icon: <Wallet size={28} />,
+      category: "Finance",
     },
     {
       title: "Technology",
       jobs: "436 jobs available",
       icon: <Monitor size={28} />,
+      category: "Technology",
     },
     {
       title: "Engineering",
       jobs: "542 jobs available",
       icon: <Code2 size={28} />,
+      category: "Engineering",
     },
     {
       title: "Business",
       jobs: "211 jobs available",
       icon: <Briefcase size={28} />,
+      category: "Business",
     },
     {
       title: "Human Resource",
       jobs: "346 jobs available",
       icon: <Users size={28} />,
+      category: "Human Resource",
     },
   ];
 
@@ -64,15 +73,16 @@ export default function Categories() {
             Explore by <span>category</span>
           </h2>
 
-          <a href="#" className="show-all">
+          <Link to="/jobs" className="show-all">
             Show all jobs <ArrowRight size={16} />
-          </a>
+          </Link>
         </div>
 
         <div className="categories-grid">
           {categories.map((cat, index) => (
-            <div
+            <Link
               key={index}
+              to={`/jobs?category=${cat.category}`}
               className={`category-card ${cat.active ? "active" : ""}`}
             >
               <div className="category-icon">{cat.icon}</div>
@@ -81,7 +91,7 @@ export default function Categories() {
               <span className="arrow">
                 <ArrowRight size={16} />
               </span>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

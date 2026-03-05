@@ -115,4 +115,41 @@ router.delete("/:id", async (req, res) => {
 });
 
 
+// 🔹 UPDATE JOB (Admin)
+router.put("/:id", async (req, res) => {
+  try {
+    const { title, company, location, category, description } = req.body;
+
+    if (!title || !company || !location || !category || !description) {
+      return res.status(400).json({
+        success: false,
+        message: "All fields are required",
+      });
+    }
+
+    const job = await Job.findByIdAndUpdate(
+      req.params.id,
+      { title, company, location, category, description },
+      { new: true, runValidators: true }
+    );
+
+    if (!job) {
+      return res.status(404).json({
+        success: false,
+        message: "Job not found",
+      });
+    }
+
+    res.status(200).json({
+      success: true,
+      message: "Job updated successfully",
+      data: job,
+    });
+
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+});
+
+
 export default router;
