@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  background: #fff;
+  background: #e0e7ff;
   border-bottom: 1px solid #eee;
   font-family: Red Hat Display;
 }
@@ -66,20 +66,24 @@
 
 .hero-wrapper {
   background: #f4f5fb;
-  padding: 80px 120px;
+  padding: 80px 20px;
   font-family: "Inter", sans-serif;
   position: relative;
   overflow: hidden;
 }
 
 .hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 60px;
 }
 
 .hero-left {
   max-width: 520px;
+  text-align: center;
 }
 
 .hero-left h1 {
@@ -88,6 +92,7 @@
   line-height: 1.2;
   color: #2d3748;
   margin: 0;
+  
 }
 
 .hero-left h1 span {
@@ -198,7 +203,7 @@
 
 --------------------------------
 .footer {
-  background: #f9f9f9;
+  background: #e0e7ff;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   color: #333;
@@ -1931,5 +1936,16 @@ textarea:focus {
     align-items: flex-start;
     gap: 16px;
   }
+}
+
+/* ========================
+   Main Container - Centers all content
+   ======================== */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 

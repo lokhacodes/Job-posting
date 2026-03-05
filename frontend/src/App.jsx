@@ -18,8 +18,8 @@ function App() {
         <Route path="/" element={
           <>
             <Navbar />
-            <Header />
-            <div className="flex-1">
+            <div className="main-container">
+              <Header />
               <Companies />
               <Categories />
               <FeaturedJobs />
